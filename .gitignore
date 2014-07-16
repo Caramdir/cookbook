@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.bbl
+*.bcf
+*.blg
+*.idx
+*.ind
+*.ilg
+*.out
+*.run.xml
+*.bzr*
+*.pdf
+*.swp
