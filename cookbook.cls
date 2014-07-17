@@ -170,6 +170,7 @@
 \defineunit*\pkg{Pkg.}
 \defineunit*\blatt{Blatt}
 \defineunit*\blatter{Blätter}
+\defineunit*\prise{Prise}
 \defineunit*\bunch{bunch}
 \defineunit*\packet{packet}
 \defineunit*\packets{packets}
