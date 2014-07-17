@@ -203,3 +203,6 @@
 \newcommand\twothird{⅔}
 \newcommand\eighth{⅛}
 \newcommand\threeeighth{⅜}
+\newcommand\onesixteenth{0.0625} %TODO: add symbols
+\newcommand\twosixteenth{0.125}
+\newcommand\threesixteenth{0.1875}
