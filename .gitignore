@@ -11,3 +11,11 @@
 *.bzr*
 *.pdf
 *.swp
+*.fdb_latexmk
+*.fls
+appetizer.tex
+main.tex
+other.tex
+sides.tex
+soups.tex
+sweets.tex
