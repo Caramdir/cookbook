@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
-\ProvidesClass{cookbook}[2011/08/06 v0.1 A class for typesetting cookbooks]
+\ProvidesClass{cookbook}[2011/08/06 v0.1 A class for typesetting cookbooks]
 \LoadClassWithOptions{scrbook}
 
 \usepackage{fontspec}
@@ -29,6 +29,7 @@
 \newif\ifck@haveinfo
 
 \newenvironment{recipe}[1]{%
+    \newpage
     \section*{#1}%
 	\def\ck@recipename{#1}%
 }{%
@@ -59,9 +60,9 @@
 %%% Ingredients
 
 \newenvironment{ingredients}{%%
-	\begin{supertabular}{r@{\hspace{\unitspace}}l@{\ }p{5cm}}%
+	\begin{tabular}{r@{\hspace{\unitspace}}l@{\ }p{5cm}}%
 }{%
-    \end{supertabular}\vspace{0.5\baselineskip}%
+    \end{tabular}\vspace{0.5\baselineskip}%
 }
 
 \def\entry{%
@@ -162,6 +163,7 @@
 % volume
 \defineunit\milliliter{ml}
 \defineunit\millilitre{ml}
+\defineunit\ml{ml}
 \defineunit\litre{l}
 \defineunit\liter{l}
 \defineunit\tl{\textsc{tl}}
