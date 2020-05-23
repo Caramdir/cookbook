@@ -41,6 +41,7 @@
     \newpage
 	#1%
     \section*{#2\hfill\textcolor{green!70!black}{\ifck@vegetarian\ (v)\fi\ifck@vegan\ (v$^+$)\fi}}%
+	\edef\@currentlabelname{#2}%
 	\def\ck@recipename{#2}%
 	\ifck@vegetarian\index[vegetarian]{#2}\fi%
 	\ifck@vegan\index[vegan]{#2}\fi%
