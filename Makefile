@@ -10,6 +10,8 @@ cookbook.pdf: cookbook.tex cookbook.cls $(SECTIONS) */*.tex cookbooks.bib Makefi
 	xindy -C utf8 -L german-duden -M texindy cookbook.idx
 	xindy -C utf8 -L german-duden -M texindy cookbook.region.idx
 	xindy -C utf8 -L german-duden -M texindy cookbook.ingredient.idx
+	xindy -C utf8 -L german-duden -M texindy cookbook.vegetarian.idx
+	xindy -C utf8 -L german-duden -M texindy cookbook.vegan.idx
 	lualatex cookbook.tex
 
 $(SECTIONS): %.tex: */*.tex Makefile

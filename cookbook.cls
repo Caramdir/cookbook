@@ -27,11 +27,23 @@
 %%% Recipe environment
 
 \newif\ifck@haveinfo
+\newif\ifck@vegan
+\newif\ifck@vegetarian
 
-\newenvironment{recipe}[1]{%
+\newindex{vegetarian}{vegetarian.idx}{vegetarian.ind}{Vegetarian Recipes}
+\newindex{vegan}{vegan.idx}{vegan.ind}{Vegan Recipes}
+
+\newcommand\vegan{\ck@vegantrue\ck@vegetariantrue}
+\newcommand\vegetarian{\ck@vegetariantrue}
+
+
+\newenvironment{recipe}[2][]{%
     \newpage
-    \section*{#1}%
-	\def\ck@recipename{#1}%
+	#1%
+    \section*{#2\hfill\textcolor{green!70!black}{\ifck@vegetarian\ (v)\fi\ifck@vegan\ (v$^+$)\fi}}%
+	\def\ck@recipename{#2}%
+	\ifck@vegetarian\index[vegetarian]{#2}\fi%
+	\ifck@vegan\index[vegan]{#2}\fi%
 }{%
 	\ck@haveinfofalse%
 	\ifx\@source\@empty\else\ck@haveinfotrue\fi%
@@ -101,7 +113,7 @@
     \@ifstar{\source@star}{\source@}%
 }
 \def\source@star{%
-    \@ifnextchar[{\source@star@}{\source@star@[]}%
+    \@ifnextchar[{\source@star@}{\source@star@[]}% %]
 }
 \def\source@star@[#1]#2{%
     \def\@source{\citetitle[#1]{#2} \cite{#2}}
