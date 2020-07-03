@@ -199,6 +199,8 @@
 \defineunit\kilogram{kg}
 \defineunit\kg{kg}
 \defineunit\pound{lbs}
+\defineunit\lb{lb}
+\defineunit\oz{oz}
 
 % temperature
 \defineunit\degC{\ensuremath{^\circ}C}
