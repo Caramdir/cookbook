@@ -1,7 +1,7 @@
 default:
 	lualatex cookbook.tex
 
-SECTIONS = appetizer.tex soups.tex sides.tex main.tex sweets.tex other.tex
+SECTIONS = appetizer.tex soups.tex sides.tex main.tex bread.tex sweets.tex other.tex
 
 cookbook.pdf: cookbook.tex cookbook.cls $(SECTIONS) */*.tex cookbooks.bib Makefile
 	lualatex cookbook.tex
